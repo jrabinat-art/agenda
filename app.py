@@ -49,6 +49,6 @@ if clients:
             if st.button("Esborrar", key=f"del_{c[0]}"):
                 cursor.execute("DELETE FROM clients WHERE id = ?", (c[0],))
                 conn.commit()
-                st.experimental_rerun()
+                st.rerun()
 else:
     st.info("Encara no hi ha clients.")
